@@ -24,6 +24,9 @@ li {
     justify-content: space-between;
     p {
       margin: 0;
+      span {
+        font-weight: bold;
+      }
     }
   }
   img {

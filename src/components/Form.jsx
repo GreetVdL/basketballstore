@@ -3,7 +3,7 @@ import "./Form.scss";
 const Form = (props) => {
   const handleFormSubmit = (e) => {
     e.preventDefault();
-    console.log(props.quantity);
+    props.onFormSubmit();
   };
 
   const handleBrandSelection = (e) => {

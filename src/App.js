@@ -7,10 +7,34 @@ import { nanoid } from "nanoid";
 
 function App() {
   const [items, setItems] = useState([
-    { id: nanoid(), brand: "Spalding", quantity: 0, price: 36 },
-    { id: nanoid(), brand: "Wilson", quantity: 0, price: 28 },
-    { id: nanoid(), brand: "Molten", quantity: 0, price: 31 },
-    { id: nanoid(), brand: "Baden", quantity: 0, price: 25 },
+    {
+      id: nanoid(),
+      brand: "Spalding",
+      quantity: 0,
+      price: 36,
+      cumulativeQuantity: 0,
+    },
+    {
+      id: nanoid(),
+      brand: "Wilson",
+      quantity: 0,
+      price: 28,
+      cumulativeQuantity: 0,
+    },
+    {
+      id: nanoid(),
+      brand: "Molten",
+      quantity: 0,
+      price: 31,
+      cumulativeQuantity: 0,
+    },
+    {
+      id: nanoid(),
+      brand: "Baden",
+      quantity: 0,
+      price: 25,
+      cumulativeQuantity: 0,
+    },
   ]);
   const [brand, setBrand] = useState("Spalding");
   const [quantity, setQuantity] = useState(1);
@@ -20,6 +44,16 @@ function App() {
   };
   const onQuantitySelection = (amount) => {
     setQuantity(amount);
+  };
+  const onFormSubmit = () => {
+    setItems(
+      items.map((obj) => {
+        if (obj.brand === brand) {
+          obj.quantity += quantity;
+        }
+        return obj;
+      })
+    );
   };
 
   return (
@@ -31,8 +65,9 @@ function App() {
         quantity={quantity}
         onBrandSelection={onBrandSelection}
         onQuantitySelection={onQuantitySelection}
+        onFormSubmit={onFormSubmit}
       />
-      <Basket />
+      <Basket items={items} />
     </div>
   );
 }

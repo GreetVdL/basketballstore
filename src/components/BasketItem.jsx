@@ -1,7 +1,7 @@
 import "./BasketItem.scss";
 import img from "../images/bb.jpg";
 
-const BasketItem = () => {
+const BasketItem = (props) => {
   return (
     <li>
       <div className="left">
@@ -9,12 +9,14 @@ const BasketItem = () => {
       </div>
       <div className="right">
         <p>
-          Brand: <span>blabla</span>
+          Brand: <span>{props.brand}</span>
         </p>
         <p>
-          Price: <span>20 $</span>
+          Price: <span>{props.price * props.quantity}$</span>
         </p>
-        <p>Quantity: 10</p>
+        <p>
+          Quantity: <span>{props.quantity}</span>
+        </p>
         <div className="incdec">
           <button>+</button>
           <button>-</button>
