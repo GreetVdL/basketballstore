@@ -2,7 +2,7 @@
 
 .basket {
   margin: 0 auto;
-  padding: 20px;
+  padding: 20px 50px;
   font-size: 2rem;
   border-radius: 15px;
   padding: 20px;
@@ -16,7 +16,7 @@
   }
   ul {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     gap: 20px;
     padding: 0;
   }

@@ -1,8 +1,13 @@
+@import "../css/variables";
+
 li {
   text-decoration: none;
   display: flex;
-  border: 2px solid black;
+  border: 3px solid black;
+  //   box-shadow: var(--shadow-elevation-medium);
   border-radius: 15px;
+  text-align: left;
+  //   background-color: $lightmint;
   .left,
   .right {
     width: 50%;
@@ -12,9 +17,25 @@ li {
     border-bottom-left-radius: 15px;
     overflow: hidden;
   }
+  .right {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    p {
+      margin: 0;
+    }
+  }
   img {
     display: block;
     width: 100%;
     height: auto;
+  }
+  .incdec {
+    display: flex;
+    justify-content: space-between;
+  }
+  button {
+    margin: 0 auto;
   }
 }
