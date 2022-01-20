@@ -42,3 +42,30 @@ li {
     margin: 0 auto;
   }
 }
+
+@media screen and (max-width: 468px) {
+  li {
+    flex-direction: column;
+    .left,
+    .right {
+      width: 100%;
+    }
+    .left {
+      border-top-left-radius: 15px;
+      border-top-right-radius: 15px;
+      border-bottom-left-radius: 0;
+    }
+    .right {
+      padding: 9px;
+      p {
+        margin: 10px 0;
+      }
+    }
+    .incdec {
+      margin: 10px 0;
+    }
+    button {
+      margin: 10px auto;
+    }
+  }
+}

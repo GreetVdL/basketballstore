@@ -40,3 +40,9 @@ form {
     // box-shadow: var(--shadow-elevation-medium);
   }
 }
+
+@media screen and (max-width: 786px) {
+  form {
+    width: 90%;
+  }
+}

@@ -12,7 +12,7 @@ const BasketItem = (props) => {
           Brand: <span>{props.brand}</span>
         </p>
         <p>
-          Price: <span>{props.price * props.quantity}$</span>
+          Price: <span>{props.price * props.quantity} $</span>
         </p>
         <p>
           Quantity: <span>{props.quantity}</span>

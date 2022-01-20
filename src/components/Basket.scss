@@ -21,3 +21,19 @@
     padding: 0;
   }
 }
+
+@media screen and (max-width: 1144px) {
+  .basket {
+    ul {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+}
+
+@media screen and (max-width: 786px) {
+  .basket {
+    ul {
+      grid-template-columns: 1fr;
+    }
+  }
+}

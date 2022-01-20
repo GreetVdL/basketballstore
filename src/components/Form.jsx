@@ -35,7 +35,7 @@ const Form = (props) => {
         Price:&nbsp;
         {props.quantity *
           props.items.filter((item) => item.brand === props.brand)[0].price}
-        $
+        &nbsp;$
       </p>
       <button type="submit">ADD TO BASKET</button>
     </form>
