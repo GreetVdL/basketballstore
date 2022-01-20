@@ -1,0 +1,23 @@
+@import "../css/variables";
+
+.basket {
+  margin: 0 auto;
+  padding: 20px;
+  font-size: 2rem;
+  border-radius: 15px;
+  padding: 20px;
+  width: 90%;
+  background-color: white;
+  box-shadow: var(--shadow-elevation-medium);
+  h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+  }
+  ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 20px;
+    padding: 0;
+  }
+}
