@@ -39,6 +39,7 @@ li {
     justify-content: space-between;
   }
   button {
+    background-color: $lightblue;
     margin: 0 auto;
     border: none;
     font-size: 1.6rem;
@@ -46,6 +47,14 @@ li {
     border-radius: 10px;
     padding: 5px 10px;
     cursor: pointer;
+  }
+}
+
+@media (hover: hover) and (pointer: fine) {
+  li {
+    button:hover {
+      background-color: $melon;
+    }
   }
 }
 

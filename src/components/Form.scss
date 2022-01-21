@@ -47,7 +47,16 @@ form {
     border-radius: 10px;
     padding: 5px 10px;
     cursor: pointer;
+    background-color: $lightblue;
     // box-shadow: var(--shadow-elevation-medium);
+  }
+}
+
+@media (hover: hover) and (pointer: fine) {
+  form {
+    button:hover {
+      background-color: $melon;
+    }
   }
 }
 
