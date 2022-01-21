@@ -18,6 +18,7 @@ const Form = (props) => {
       <h2>shop basketballs</h2>
       <label htmlFor="brand">Brand:</label>
       <select name="brand" id="brand" onChange={handleBrandSelection}>
+        <option value="selectabrand">Select a brand</option>
         <option value="Spalding">Spalding</option>
         <option value="Wilson">Wilson</option>
         <option value="Molten">Molten</option>
@@ -33,8 +34,9 @@ const Form = (props) => {
       />
       <p>
         Price:&nbsp;
-        {props.quantity *
-          props.items.filter((item) => item.brand === props.brand)[0].price}
+        {props.brand !== "" &&
+          props.quantity *
+            props.items.filter((item) => item.brand === props.brand)[0].price}
         &nbsp;$
       </p>
       <button type="submit">ADD TO BASKET</button>

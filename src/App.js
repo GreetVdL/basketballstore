@@ -44,16 +44,19 @@ function App() {
       image: baden,
     },
   ]);
-  const [brand, setBrand] = useState("Spalding");
+  const [brand, setBrand] = useState("");
   const [quantity, setQuantity] = useState(1);
 
   const onBrandSelection = (basketball) => {
-    setBrand(basketball);
+    if (basketball !== "selectabrand") {
+      setBrand(basketball);
+    }
   };
   const onQuantitySelection = (amount) => {
     setQuantity(amount);
   };
   const onFormSubmit = () => {
+    if (brand === "") return;
     setItems(
       items.map((obj) => {
         if (obj.brand === brand) {
