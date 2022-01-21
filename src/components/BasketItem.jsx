@@ -3,10 +3,13 @@ import img from "../images/bb.jpg";
 
 const BasketItem = (props) => {
   const handleIncrementButton = () => {
-    props.onIncrementClick();
+    props.onIncrementClick(props.brand);
   };
   const handleDecrementButton = () => {
-    props.onDecrementClick();
+    props.onDecrementClick(props.brand);
+  };
+  const handleDeleteButton = () => {
+    props.onDeleteClick(props.brand);
   };
 
   return (
@@ -28,7 +31,7 @@ const BasketItem = (props) => {
           <button onClick={handleIncrementButton}>+</button>
           <button onClick={handleDecrementButton}>-</button>
         </div>
-        <button>DELETE</button>
+        <button onClick={handleDeleteButton}>DELETE</button>
       </div>
     </li>
   );

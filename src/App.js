@@ -55,21 +55,31 @@ function App() {
       })
     );
   };
-  const onIncrementClick = () => {
+  const onIncrementClick = (ball) => {
     setItems(
       items.map((obj) => {
-        if (obj.brand === brand) {
+        if (obj.brand === ball) {
           obj.quantity = obj.quantity + 1;
         }
         return obj;
       })
     );
   };
-  const onDecrementClick = () => {
+  const onDecrementClick = (ball) => {
     setItems(
       items.map((obj) => {
-        if (obj.brand === brand) {
+        if (obj.brand === ball) {
           obj.quantity = obj.quantity > 1 ? obj.quantity - 1 : obj.quantity;
+        }
+        return obj;
+      })
+    );
+  };
+  const onDeleteClick = (ball) => {
+    setItems(
+      items.map((obj) => {
+        if (obj.brand === ball) {
+          obj.quantity = 0;
         }
         return obj;
       })
@@ -91,6 +101,7 @@ function App() {
         items={items}
         onIncrementClick={onIncrementClick}
         onDecrementClick={onDecrementClick}
+        onDeleteClick={onDeleteClick}
       />
     </div>
   );
