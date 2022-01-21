@@ -27,10 +27,10 @@ const BasketItem = (props) => {
           Quantity: <span>{props.quantity}</span>
         </p>
         <div className="incdec">
-          <button onClick={handleIncrementButton}>+</button>
           <button onClick={handleDecrementButton}>-</button>
+          <button onClick={handleIncrementButton}>+</button>
         </div>
-        <button onClick={handleDeleteButton}>DELETE</button>
+        <button onClick={handleDeleteButton}>REMOVE</button>
       </div>
     </li>
   );

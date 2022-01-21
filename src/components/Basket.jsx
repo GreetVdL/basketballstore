@@ -11,22 +11,24 @@ const Basket = ({
     <div className="basket">
       <h2>Basket</h2>
       <ul>
-        {items
-          .filter((obj) => obj.quantity > 0)
-          .map((obj) => (
-            <BasketItem
-              key={obj.id}
-              brand={obj.brand}
-              quantity={obj.quantity}
-              price={obj.price}
-              image={obj.image}
-              onIncrementClick={onIncrementClick}
-              onDecrementClick={onDecrementClick}
-              onDeleteClick={onDeleteClick}
-            />
-          ))}
+        {items.filter((obj) => obj.quantity > 0).length
+          ? items
+              .filter((obj) => obj.quantity > 0)
+              .map((obj) => (
+                <BasketItem
+                  key={obj.id}
+                  brand={obj.brand}
+                  quantity={obj.quantity}
+                  price={obj.price}
+                  image={obj.image}
+                  onIncrementClick={onIncrementClick}
+                  onDecrementClick={onDecrementClick}
+                  onDeleteClick={onDeleteClick}
+                />
+              ))
+          : "Your basket is empty for now..."}
       </ul>
-      <div class="summary">
+      <div className="summary">
         <p>
           Total items:{" "}
           <span>
