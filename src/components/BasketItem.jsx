@@ -2,6 +2,13 @@ import "./BasketItem.scss";
 import img from "../images/bb.jpg";
 
 const BasketItem = (props) => {
+  const handleIncrementButton = () => {
+    props.onIncrementClick();
+  };
+  const handleDecrementButton = () => {
+    props.onDecrementClick();
+  };
+
   return (
     <li>
       <div className="left">
@@ -18,8 +25,8 @@ const BasketItem = (props) => {
           Quantity: <span>{props.quantity}</span>
         </p>
         <div className="incdec">
-          <button>+</button>
-          <button>-</button>
+          <button onClick={handleIncrementButton}>+</button>
+          <button onClick={handleDecrementButton}>-</button>
         </div>
         <button>DELETE</button>
       </div>

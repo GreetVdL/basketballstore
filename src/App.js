@@ -55,6 +55,26 @@ function App() {
       })
     );
   };
+  const onIncrementClick = () => {
+    setItems(
+      items.map((obj) => {
+        if (obj.brand === brand) {
+          obj.quantity = obj.quantity + 1;
+        }
+        return obj;
+      })
+    );
+  };
+  const onDecrementClick = () => {
+    setItems(
+      items.map((obj) => {
+        if (obj.brand === brand) {
+          obj.quantity = obj.quantity > 1 ? obj.quantity - 1 : obj.quantity;
+        }
+        return obj;
+      })
+    );
+  };
 
   return (
     <div className="App">
@@ -67,7 +87,11 @@ function App() {
         onQuantitySelection={onQuantitySelection}
         onFormSubmit={onFormSubmit}
       />
-      <Basket items={items} />
+      <Basket
+        items={items}
+        onIncrementClick={onIncrementClick}
+        onDecrementClick={onDecrementClick}
+      />
     </div>
   );
 }

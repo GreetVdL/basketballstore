@@ -1,7 +1,7 @@
 import "./Basket.scss";
 import BasketItem from "./BasketItem";
 
-const Basket = ({ items }) => {
+const Basket = ({ items, onIncrementClick, onDecrementClick }) => {
   return (
     <div className="basket">
       <h2>Basket</h2>
@@ -15,6 +15,8 @@ const Basket = ({ items }) => {
               quantity={obj.quantity}
               price={obj.price}
               cumulQuantity={obj.cumulativeQuantity}
+              onIncrementClick={onIncrementClick}
+              onDecrementClick={onDecrementClick}
             />
           ))}
       </ul>
