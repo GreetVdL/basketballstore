@@ -1,16 +1,22 @@
 import "./Form.scss";
-import { useRef } from "react";
+import { useState, useRef } from "react";
 
 const Form = (props) => {
   const formRef = useRef();
 
+  const [isValid, setIsValid] = useState(true);
+
   const handleFormSubmit = (e) => {
     e.preventDefault();
+    if (props.brand === "") {
+      setIsValid(false);
+    }
     props.onFormSubmit();
     formRef.current.reset();
   };
 
   const handleBrandSelection = (e) => {
+    setIsValid(true);
     props.onBrandSelection(e.target.value);
   };
   const handleQuantitySelection = (e) => {
@@ -28,6 +34,7 @@ const Form = (props) => {
         <option value="Molten">Molten</option>
         <option value="Baden">Baden</option>
       </select>
+      {isValid ? null : <p className="check">Please select a brand</p>}
       <label htmlFor="quantity">Quantity:</label>
       <input
         value={props.quantity}

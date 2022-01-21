@@ -13,6 +13,9 @@ form {
   background-color: white;
   box-shadow: var(--shadow-elevation-medium);
   margin-bottom: 25px;
+  .check {
+    color: $red;
+  }
   h2 {
     margin-top: 0;
     margin-bottom: 20px;
