@@ -1,9 +1,13 @@
 import "./Form.scss";
+import { useRef } from "react";
 
 const Form = (props) => {
+  const formRef = useRef();
+
   const handleFormSubmit = (e) => {
     e.preventDefault();
     props.onFormSubmit();
+    formRef.current.reset();
   };
 
   const handleBrandSelection = (e) => {
@@ -14,7 +18,7 @@ const Form = (props) => {
   };
 
   return (
-    <form action="" onSubmit={handleFormSubmit}>
+    <form action="" onSubmit={handleFormSubmit} ref={formRef}>
       <h2>shop basketballs</h2>
       <label htmlFor="brand">Brand:</label>
       <select name="brand" id="brand" onChange={handleBrandSelection}>
@@ -34,9 +38,11 @@ const Form = (props) => {
       />
       <p>
         Price:&nbsp;
-        {props.brand !== "" &&
+        {(props.brand !== "" &&
           props.quantity *
-            props.items.filter((item) => item.brand === props.brand)[0].price}
+            props.items.filter((item) => item.brand === props.brand)[0]
+              .price) ||
+          0}
         &nbsp;$
       </p>
       <button type="submit">ADD TO BASKET</button>

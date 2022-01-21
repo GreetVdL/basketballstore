@@ -16,7 +16,6 @@ function App() {
       brand: "Spalding",
       quantity: 0,
       price: 36,
-      cumulativeQuantity: 0,
       image: spalding,
     },
     {
@@ -24,7 +23,6 @@ function App() {
       brand: "Wilson",
       quantity: 0,
       price: 28,
-      cumulativeQuantity: 0,
       image: wilson,
     },
     {
@@ -32,7 +30,6 @@ function App() {
       brand: "Molten",
       quantity: 0,
       price: 31,
-      cumulativeQuantity: 0,
       image: molten,
     },
     {
@@ -40,7 +37,6 @@ function App() {
       brand: "Baden",
       quantity: 0,
       price: 25,
-      cumulativeQuantity: 0,
       image: baden,
     },
   ]);
@@ -65,6 +61,8 @@ function App() {
         return obj;
       })
     );
+    setBrand("");
+    setQuantity(1);
   };
   const onIncrementClick = (ball) => {
     setItems(
