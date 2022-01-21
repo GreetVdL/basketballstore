@@ -21,7 +21,7 @@ form {
   label,
   input,
   select {
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     border: none;
   }
   input {
@@ -29,6 +29,9 @@ form {
     border-radius: 15px;
     padding: 5px 15px;
     // box-shadow: var(--shadow-elevation-medium);
+  }
+  p {
+    margin: 0 0 20px 0;
   }
   button {
     font-size: 2.1rem;
