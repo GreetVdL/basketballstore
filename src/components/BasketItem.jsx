@@ -1,5 +1,4 @@
 import "./BasketItem.scss";
-import img from "../images/bb.jpg";
 
 const BasketItem = (props) => {
   const handleIncrementButton = () => {
@@ -15,7 +14,7 @@ const BasketItem = (props) => {
   return (
     <li>
       <div className="left">
-        <img src={img} alt="basketball logo" />
+        <img src={props.image} alt="basketball logo" />
       </div>
       <div className="right">
         <p>

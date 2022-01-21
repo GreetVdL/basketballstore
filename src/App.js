@@ -4,6 +4,10 @@ import Form from "./components/Form";
 import Basket from "./components/Basket";
 import { useState } from "react";
 import { nanoid } from "nanoid";
+import spalding from "./images/spalding.webp";
+import wilson from "./images/wilson.jpg";
+import molten from "./images/molten.webp";
+import baden from "./images/baden.jpg";
 
 function App() {
   const [items, setItems] = useState([
@@ -13,6 +17,7 @@ function App() {
       quantity: 0,
       price: 36,
       cumulativeQuantity: 0,
+      image: spalding,
     },
     {
       id: nanoid(),
@@ -20,6 +25,7 @@ function App() {
       quantity: 0,
       price: 28,
       cumulativeQuantity: 0,
+      image: wilson,
     },
     {
       id: nanoid(),
@@ -27,6 +33,7 @@ function App() {
       quantity: 0,
       price: 31,
       cumulativeQuantity: 0,
+      image: molten,
     },
     {
       id: nanoid(),
@@ -34,6 +41,7 @@ function App() {
       quantity: 0,
       price: 25,
       cumulativeQuantity: 0,
+      image: baden,
     },
   ]);
   const [brand, setBrand] = useState("Spalding");
