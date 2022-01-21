@@ -15,11 +15,15 @@ form {
   margin-bottom: 25px;
   .check {
     color: $red;
+    margin-top: 10px;
   }
   h2 {
     margin-top: 0;
     margin-bottom: 20px;
     text-transform: uppercase;
+  }
+  .quantity {
+    margin-top: 10px;
   }
   label,
   input,
