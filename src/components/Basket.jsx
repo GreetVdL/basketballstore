@@ -18,6 +18,27 @@ const Basket = ({ items }) => {
             />
           ))}
       </ul>
+      <div class="summary">
+        <p>
+          Total items:{" "}
+          <span>
+            {items.reduce((acc, tot) => {
+              return acc + tot.quantity;
+            }, 0)}
+          </span>
+        </p>
+        <p>
+          Total price:{" "}
+          <span>
+            {items
+              .map((item) => item.price * item.quantity)
+              .reduce((acc, tot) => {
+                return acc + tot;
+              }, 0)}
+            &nbsp;$
+          </span>
+        </p>
+      </div>
     </div>
   );
 };

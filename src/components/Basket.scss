@@ -20,6 +20,14 @@
     gap: 20px;
     padding: 0;
   }
+  .summary {
+    background-color: $lightmint;
+    padding: 20px 50px;
+    border-radius: 15px;
+    span {
+      font-weight: bold;
+    }
+  }
 }
 
 @media screen and (max-width: 1144px) {
