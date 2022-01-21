@@ -61,9 +61,11 @@ li {
 @media screen and (max-width: 468px) {
   li {
     flex-direction: column;
-    .left,
-    .right {
+    .left {
       width: 100%;
+    }
+    .right {
+      width: calc(100% - 18px);
     }
     .left {
       border-top-left-radius: 15px;
