@@ -26,11 +26,11 @@ const Basket = ({
                   onDeleteClick={onDeleteClick}
                 />
               ))
-          : "Your basket is empty for now..."}
+          : "Your basket is currently empty..."}
       </ul>
       <div className="summary">
         <p>
-          Total items:{" "}
+          Basketballs:{" "}
           <span>
             {items.reduce((acc, tot) => {
               return acc + tot.quantity;
