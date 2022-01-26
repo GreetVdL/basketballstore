@@ -4,6 +4,15 @@ import "./index.scss";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 
+// disable pinch-to-zoom
+document.addEventListener(
+  "touchmove",
+  function (e) {
+    e.preventDefault();
+  },
+  { passive: false }
+);
+
 ReactDOM.render(
   <React.StrictMode>
     <App />
