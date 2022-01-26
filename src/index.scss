@@ -1,6 +1,11 @@
 @import "./css/variables";
 @import "./css/fonts";
 
+// disable zoom on pinch
+body {
+  touch-action: pan-x pan-y;
+}
+
 :root {
   --shadow-color: 163deg 34% 48%;
   --shadow-elevation-low: 0.3px 0.5px 0.7px hsl(var(--shadow-color) / 0.34),
